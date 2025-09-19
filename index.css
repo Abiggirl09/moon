@@ -1,0 +1,108 @@
+* {  
+    padding: 0;  
+    margin: 0;  
+  }  
+  
+  .navbar {  
+    display: flex;  
+    justify-content: space-around;  
+    align-items: center;  
+    background: white;  
+    padding: 10px 20px; /* Reduced padding */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  
+    position: fixed; /* Make the navbar fixed */  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    z-index: 100; /* Ensure the navbar is on top */  
+  }  
+  
+  .nav-links {  
+    list-style: none;  
+    display: flex;  
+    gap: 40px;  
+    margin: 0;  
+    padding: 0;
+  }  
+  
+  .nav-links li {  
+    position: relative;  
+  }  
+  
+  .nav-links li a {  
+    display: block;  
+    text-decoration: none;  
+    color: #333;  
+    padding: 5px 0;  
+    transition: color 0.4s ease;  
+  }  
+  
+  .nav-links li a::after {  
+    content: "";  
+    position: absolute;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    height: 2px;  
+    background-color: #0077b6;  
+    transform: scaleX(0);  
+    transition: transform 0.4s ease;  
+  }  
+  
+  .nav-links li a:hover::after {  
+    transform: scaleX(1);  
+  }  
+  
+  .logo {  
+    max-height: 40px;
+  }  
+  
+  #button {  
+    padding: 11px 13px; 
+    background-color: rgb(96, 96, 249);  
+    color: white;  
+    font-size: 16px; 
+    border: none;  
+    border-radius: 9px;  
+    cursor: pointer;  
+  }
+  /* Styling for jobseekers label */
+.jobseeker-label {  
+  display: inline-block;  
+  background-color: #229cde; /* blue color */  
+  color: white; /* text color */  
+  padding: 7px 30px; /* add some padding */
+  letter-spacing: 8px;  
+  font-weight: bold; /* make the text bold */  
+  font-size: 18px; /* adjust the font size as needed */  
+}
+
+.employers-label {
+  display: inline-block;  
+  background-color: rgb(254, 204, 3); /* yellow color */
+  color: black;
+  padding: 7px 30px; 
+  letter-spacing: 8px;  
+  font-weight: bold;  
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.employers {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .jobseeker-label, .employers-label {
+      font-size: 16px;
+  }
+  .row {
+      flex-direction: column; 
+  }
+  .employers {
+      text-align: left; 
+  }
+}
